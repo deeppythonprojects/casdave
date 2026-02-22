@@ -147,18 +147,18 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="space-y-12 max-w-6xl mx-auto">
             {teamData.map((member) => (
-              <div key={member.id} className="bg-white rounded-lg border border-neutral-border shadow-card hover:shadow-hover transition-shadow p-8">
-                <div className="flex flex-col md:flex-row gap-6">
-                  <div className="flex-shrink-0">
+              <div key={member.id} className="bg-white rounded-lg border border-neutral-border shadow-card hover:shadow-hover transition-shadow overflow-hidden">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+                  <div className="md:col-span-1">
                     <img 
                       src={member.image} 
                       alt={member.name}
-                      className="w-48 h-48 object-cover rounded-lg"
+                      className="w-full h-full object-cover min-h-[300px]"
                     />
                   </div>
-                  <div className="flex-1">
+                  <div className="md:col-span-2 p-8">
                     <h3 className="text-2xl font-bold text-neutral-text-primary mb-1">
                       {member.name}
                     </h3>
