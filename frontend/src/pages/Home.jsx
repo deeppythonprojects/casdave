@@ -61,18 +61,16 @@ const Home = () => {
 
       {/* Hero Section */}
       <section className="relative text-white section-spacing overflow-hidden" style={{
-        backgroundImage: 'url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80")',
+        backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80")',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/70" />
-        
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight drop-shadow-lg">
               Your Trusted Financial Partners in Ahmedabad
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white/95 leading-relaxed">
+            <p className="text-xl md:text-2xl mb-8 text-white/95 leading-relaxed drop-shadow-md">
               Expert Chartered Accountants providing comprehensive tax, audit, and business advisory services with utmost accuracy and integrity.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -82,7 +80,7 @@ const Home = () => {
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button variant="primary" size="lg" dataTestId="hero-contact-button" className="w-full sm:w-auto bg-secondary hover:bg-secondary-hover border-2 border-white">
+                <Button variant="primary" size="lg" dataTestId="hero-contact-button" className="w-full sm:w-auto bg-primary hover:bg-primary-hover border-2 border-white">
                   Get In Touch
                 </Button>
               </Link>
