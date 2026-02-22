@@ -208,7 +208,7 @@ const Home = () => {
         backgroundPosition: 'center'
       }}>
         <div className="container-custom relative z-10">
-          <div className="max-w-5xl mx-16 bg-primary/95 backdrop-blur-sm rounded-2xl shadow-2xl p-12 border border-white/20">
+          <div className="max-w-6xl mx-auto bg-primary/95 backdrop-blur-sm rounded-2xl shadow-2xl p-8 md:p-12 lg:p-16 border border-white/20">
             <div className="text-center mb-8">
               <svg className="w-16 h-16 mx-auto mb-6 text-white/60" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />

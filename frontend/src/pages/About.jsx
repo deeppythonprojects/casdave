@@ -147,16 +147,16 @@ const About = () => {
             </p>
           </div>
 
-          <div className="space-y-20 max-w-6xl mx-auto">
+          <div className="space-y-24 max-w-6xl mx-auto">
             {teamData.map((member, index) => (
               <div key={member.id} className="bg-white rounded-lg border border-neutral-border shadow-card hover:shadow-hover transition-shadow overflow-hidden">
-                <div className={`grid grid-cols-1 md:grid-cols-3 gap-0 ${index % 2 === 1 ? 'md:flex md:flex-row-reverse' : ''}`}>
-                  {/* Image with LinkedIn Hover */}
-                  <div className="md:col-span-1 relative group">
+                <div className={`grid grid-cols-1 md:grid-cols-5 gap-0 ${index % 2 === 1 ? 'md:flex md:flex-row-reverse' : ''}`}>
+                  {/* Image with LinkedIn Hover - Fixed width */}
+                  <div className="md:col-span-2 relative group">
                     <img 
                       src={member.image} 
                       alt={member.name}
-                      className="w-full h-full object-cover min-h-[300px]"
+                      className="w-full h-full object-cover min-h-[350px] md:min-h-[400px]"
                     />
                     {/* LinkedIn Hover Overlay */}
                     <a 
@@ -172,7 +172,7 @@ const About = () => {
                     </a>
                   </div>
                   {/* Content */}
-                  <div className="md:col-span-2 p-8">
+                  <div className="md:col-span-3 p-8">
                     <h3 className="text-2xl font-bold text-neutral-text-primary mb-1">
                       {member.name}
                     </h3>

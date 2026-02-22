@@ -55,30 +55,24 @@ const ServiceDetail = () => {
         </div>
       </div>
 
-      {/* Service Hero */}
-      <section className="bg-primary text-white py-20">
-        <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">{service.title}</h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
+      {/* Service Hero with Background Image */}
+      <section 
+        className="relative py-24 md:py-32 text-white overflow-hidden"
+        style={{
+          backgroundImage: service.image 
+            ? `linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("${service.image}")`
+            : 'linear-gradient(to right, rgba(30, 64, 175, 0.9), rgba(30, 64, 175, 0.7))',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        <div className="container-custom text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-lg">{service.title}</h1>
+          <p className="text-xl md:text-2xl text-white/95 max-w-3xl mx-auto drop-shadow-md">
             {service.shortDescription}
           </p>
         </div>
       </section>
-
-      {/* Service Image */}
-      {service.image && (
-        <section className="-mt-12 relative z-10">
-          <div className="container-custom">
-            <div className="aspect-video rounded-lg overflow-hidden shadow-hover border-4 border-white">
-              <img 
-                src={service.image} 
-                alt={service.title}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* Service Details */}
       <section className="section-spacing bg-white">
@@ -158,24 +152,31 @@ const ServiceDetail = () => {
         </section>
       )}
 
-      {/* CTA Section */}
-      <section className="section-spacing bg-white">
+      {/* CTA Section with Background Image */}
+      <section className="section-spacing">
         <div className="container-custom">
-          <div className="bg-primary rounded-2xl shadow-hover p-12 text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <div 
+            className="rounded-2xl shadow-hover p-12 text-center text-white overflow-hidden relative"
+            style={{
+              backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1600&q=80")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 drop-shadow-lg">
               Ready to Get Started?
             </h2>
-            <p className="text-lg mb-8 text-white/90 max-w-2xl mx-auto">
+            <p className="text-lg mb-8 text-white/95 max-w-2xl mx-auto drop-shadow-md">
               Contact us today to discuss how we can help with your {service.title.toLowerCase()} needs.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link to="/contact">
-                <Button variant="secondary" size="lg" dataTestId="service-detail-cta-contact" className="w-full sm:w-auto">
+                <Button variant="secondary" size="lg" dataTestId="service-detail-cta-contact" className="w-full sm:w-auto bg-white text-primary hover:bg-white/90">
                   Contact Us
                 </Button>
               </Link>
               <Link to="/services">
-                <Button variant="primary" size="lg" dataTestId="service-detail-cta-all-services" className="w-full sm:w-auto bg-white text-primary hover:bg-white/90">
+                <Button variant="primary" size="lg" dataTestId="service-detail-cta-all-services" className="w-full sm:w-auto bg-transparent border-2 border-white hover:bg-white/10">
                   View All Services
                 </Button>
               </Link>

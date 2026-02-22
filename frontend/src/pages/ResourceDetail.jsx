@@ -90,77 +90,76 @@ const ResourceDetail = () => {
         </div>
       </div>
 
-      {/* Article Header */}
+      {/* Article Header with Side-by-Side Layout */}
       <section className="section-spacing bg-white">
         <div className="container-custom">
-          <article className="max-w-4xl mx-auto">
-            {/* Category Badge */}
-            <div className="mb-6">
-              <span className="inline-block bg-primary text-white text-sm font-semibold px-4 py-2 rounded-full">
-                {resource.category}
-              </span>
-            </div>
-
-            {/* Title */}
-            <h1 className="text-4xl md:text-5xl font-bold text-neutral-text-primary mb-6">
-              {resource.title}
-            </h1>
-
-            {/* Meta Information */}
-            <div className="flex flex-wrap items-center gap-6 text-neutral-text-secondary mb-8 pb-8 border-b border-neutral-border">
-              <div className="flex items-center">
-                <FaUser className="mr-2" />
-                <span>{resource.author}</span>
-              </div>
-              <div className="flex items-center">
-                <FaClock className="mr-2" />
-                <span>{formatDate(resource.date)}</span>
-              </div>
-              {resource.tags && resource.tags.length > 0 && (
-                <div className="flex items-center">
-                  <FaTag className="mr-2" />
-                  <span>{resource.tags.join(', ')}</span>
+          <article className="max-w-6xl mx-auto">
+            {/* Hero Section - Image Left, Content Right */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12">
+              {/* Featured Image - Left */}
+              {resource.image && (
+                <div className="order-1">
+                  <img 
+                    src={resource.image} 
+                    alt={resource.title}
+                    className="w-full h-full object-cover rounded-lg shadow-hover min-h-[300px] lg:min-h-[400px]"
+                  />
                 </div>
               )}
+              
+              {/* Content - Right */}
+              <div className="order-2 flex flex-col justify-center">
+                {/* Category Badge */}
+                <div className="mb-4">
+                  <span className="inline-block bg-primary text-white text-sm font-semibold px-4 py-2 rounded-full">
+                    {resource.category}
+                  </span>
+                </div>
+
+                {/* Title */}
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-text-primary mb-6">
+                  {resource.title}
+                </h1>
+
+                {/* Meta Information */}
+                <div className="flex flex-wrap items-center gap-4 text-neutral-text-secondary mb-6">
+                  <div className="flex items-center">
+                    <FaUser className="mr-2 text-primary" />
+                    <span>{resource.author}</span>
+                  </div>
+                  <div className="flex items-center">
+                    <FaClock className="mr-2 text-primary" />
+                    <span>{formatDate(resource.date)}</span>
+                  </div>
+                </div>
+
+                {/* Tags */}
+                {resource.tags && resource.tags.length > 0 && (
+                  <div className="flex flex-wrap gap-2">
+                    {resource.tags.map((tag, index) => (
+                      <span 
+                        key={index}
+                        className="bg-neutral-surface text-neutral-text-secondary px-3 py-1 rounded-full text-sm border border-neutral-border"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
 
-            {/* Featured Image */}
-            {resource.image && (
-              <div className="mb-12">
-                <img 
-                  src={resource.image} 
-                  alt={resource.title}
-                  className="w-full rounded-lg shadow-hover"
-                />
-              </div>
-            )}
-
             {/* Article Content */}
-            <div 
-              className="prose prose-lg max-w-none"
-              style={{
-                color: '#475569',
-                lineHeight: '1.8'
-              }}
-              dangerouslySetInnerHTML={{ __html: resource.content }}
-            />
-
-            {/* Tags */}
-            {resource.tags && resource.tags.length > 0 && (
-              <div className="mt-12 pt-8 border-t border-neutral-border">
-                <p className="text-sm font-semibold text-neutral-text-primary mb-3">Tags:</p>
-                <div className="flex flex-wrap gap-2">
-                  {resource.tags.map((tag, index) => (
-                    <span 
-                      key={index}
-                      className="bg-neutral-surface text-neutral-text-secondary px-4 py-2 rounded-full text-sm border border-neutral-border"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
+            <div className="max-w-4xl mx-auto">
+              <div 
+                className="prose prose-lg max-w-none"
+                style={{
+                  color: '#475569',
+                  lineHeight: '1.8'
+                }}
+                dangerouslySetInnerHTML={{ __html: resource.content }}
+              />
+            </div>
 
             {/* CTA Box */}
             <div className="mt-12 bg-accent p-8 rounded-lg border border-primary/20">
