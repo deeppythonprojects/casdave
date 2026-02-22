@@ -71,8 +71,8 @@ const Header = () => {
               <Link
                 to="/"
                 className={`nav-link px-4 py-2 rounded-md text-sm font-medium tracking-wide uppercase ${
-                  isActive('/') ? 'bg-white/10' : 'hover:bg-white/10'
-                } transition-colors`}
+                  isActive('/') ? 'font-bold underline underline-offset-4' : ''
+                } transition-all`}
                 data-testid="nav-link-home"
               >
                 Home
@@ -80,8 +80,8 @@ const Header = () => {
               <Link
                 to="/about"
                 className={`nav-link px-4 py-2 rounded-md text-sm font-medium tracking-wide uppercase ${
-                  isActive('/about') ? 'bg-white/10' : 'hover:bg-white/10'
-                } transition-colors`}
+                  isActive('/about') ? 'font-bold underline underline-offset-4' : ''
+                } transition-all`}
                 data-testid="nav-link-about"
               >
                 About Us
