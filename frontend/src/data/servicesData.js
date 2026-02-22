@@ -23,7 +23,7 @@ export const servicesData = [
     title: 'Indirect Taxes (GST, Customs & DGFT)',
     slug: 'indirect-taxes',
     icon: 'FaReceipt',
-    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
+    image: 'https://images.pexels.com/photos/8962520/pexels-photo-8962520.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     shortDescription: 'Expert advisory and compliance services under GST, Customs, and DGFT, including GST registrations, audits, refunds, and transaction-specific tax structuring.',
     fullDescription: 'Our team possesses wide experience and in-depth knowledge of Indirect Tax Laws and capable of providing expert services in this domain.',
     features: [
