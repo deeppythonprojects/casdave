@@ -64,7 +64,7 @@ export const servicesData = [
     title: 'Subsidy Consultancy for MSMEs',
     slug: 'subsidy-consultancy',
     icon: 'FaHandHoldingUsd',
-    image: 'https://images.unsplash.com/photo-1556155092-8707de31f9c4?w=800&q=80',
+    image: 'https://images.pexels.com/photos/5257005/pexels-photo-5257005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     shortDescription: 'We help MSMEs and large units maximize benefits from central and state subsidies like capital and interest subsidies. Services include eligibility assessment, documentation & liaison.',
     fullDescription: 'We offer comprehensive services to our MSME Clients as well as Large Manufacturing Units and Start-ups in connection with availment of various incentives and subsidies such as Capital Subsidy, Interest Subsidy, SGST Reimbursement.',
     features: [
