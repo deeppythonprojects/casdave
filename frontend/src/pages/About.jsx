@@ -32,11 +32,15 @@ const About = () => {
         schemaMarkup={schemaMarkup}
       />
 
-      {/* Page Hero */}
-      <section className="bg-primary text-white py-20">
-        <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Dave & Associates</h1>
-          <p className="text-xl text-white/90">Chartered Accountants</p>
+      {/* Page Hero with Background Image */}
+      <section className="relative py-20 overflow-hidden" style={{
+        backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1600&q=80")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
+        <div className="container-custom text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg">Dave & Associates</h1>
+          <p className="text-xl text-white/95 drop-shadow-md">Chartered Accountants</p>
         </div>
       </section>
 
