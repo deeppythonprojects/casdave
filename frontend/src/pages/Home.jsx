@@ -201,21 +201,30 @@ const Home = () => {
         </section>
       )}
 
-      {/* Quote Section */}
+      {/* Quote Section with CTA */}
       <section className="relative section-spacing text-white overflow-hidden" style={{
         backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80")',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
         <div className="container-custom relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <svg className="w-16 h-16 mx-auto mb-6 text-white/60" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
-            </svg>
-            <blockquote className="text-2xl md:text-3xl font-medium mb-6 leading-relaxed drop-shadow-lg">
-              "We endeavor to constantly improve the quality of our services through adhering to integrity, professional excellence and proactive client centric approach."
-            </blockquote>
-            <p className="text-xl text-white/95 drop-shadow-md">Our Commitment to Excellence</p>
+          <div className="max-w-5xl mx-16 bg-primary/95 backdrop-blur-sm rounded-2xl shadow-2xl p-12 border border-white/20">
+            <div className="text-center mb-8">
+              <svg className="w-16 h-16 mx-auto mb-6 text-white/60" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
+              </svg>
+              <blockquote className="text-2xl md:text-3xl font-medium mb-6 leading-relaxed drop-shadow-lg">
+                "We endeavor to constantly improve the quality of our services through adhering to integrity, professional excellence and proactive client centric approach."
+              </blockquote>
+              <p className="text-xl text-white/95 drop-shadow-md mb-8">Our Commitment to Excellence</p>
+            </div>
+            <div className="text-center">
+              <Link to="/contact">
+                <Button variant="secondary" size="lg" dataTestId="quote-cta-contact" className="bg-white text-primary hover:bg-white/90 shadow-lg">
+                  Contact Us Today
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
