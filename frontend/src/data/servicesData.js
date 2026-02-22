@@ -127,7 +127,7 @@ export const servicesData = [
     title: 'Virtual CFO & Outsourced Accounting',
     slug: 'virtual-cfo',
     icon: 'FaUserTie',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1704652329540-851160c7741f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlYW0lMjBtZWV0aW5nJTIwY29sbGFib3JhdGlvbiUyMHZpYnJhbnR8ZW58MHx8fHwxNzcxNzcxMzkxfDA&ixlib=rb-4.1.0&q=85',
     shortDescription: 'Full-service outsourced accounting and financial management, including bookkeeping, receivables/payables, bank reconciliation, reporting, and structural financial advisory.',
     fullDescription: 'We provide comprehensive Virtual CFO services and outsourced accounting solutions to help businesses manage their financial operations efficiently without the cost of a full-time CFO.',
     features: [
