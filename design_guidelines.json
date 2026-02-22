@@ -1,0 +1,148 @@
+{
+  "project_name": "Dave and Associates Chartered Accountants",
+  "design_philosophy": {
+    "identity": "Professional, Trustworthy, Conservative, Modern",
+    "core_principles": [
+      "Trust through Clarity: Generous whitespace, clear typography, no clutter.",
+      "Conservative Modernity: Traditional values (blue/white) presented with modern precision (clean lines, subtle shadows).",
+      "Content First: The expertise must shine. Design supports the content, doesn't overshadow it.",
+      "Performance: Fast loading, mobile-first, accessible."
+    ],
+    "target_audience": "Business owners, Entrepreneurs, MSMEs seeking expert financial guidance."
+  },
+  "typography": {
+    "font_family": {
+      "sans": [
+        "Aptos",
+        "Helvetica Neue",
+        "Arial",
+        "sans-serif"
+      ],
+      "heading": [
+        "Aptos",
+        "Helvetica Neue",
+        "Arial",
+        "sans-serif"
+      ]
+    },
+    "scale": {
+      "h1": "text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight",
+      "h2": "text-3xl md:text-4xl font-bold tracking-tight",
+      "h3": "text-2xl md:text-3xl font-semibold tracking-tight",
+      "h4": "text-xl md:text-2xl font-semibold",
+      "body": "text-base md:text-lg leading-relaxed text-slate-600",
+      "small": "text-sm text-slate-500",
+      "nav": "text-sm font-medium tracking-wide uppercase"
+    }
+  },
+  "colors": {
+    "primary": {
+      "DEFAULT": "#1e3a8a",
+      "hover": "#172554",
+      "foreground": "#ffffff"
+    },
+    "secondary": {
+      "DEFAULT": "#2563eb",
+      "hover": "#1d4ed8",
+      "foreground": "#ffffff"
+    },
+    "accent": {
+      "DEFAULT": "#eff6ff",
+      "foreground": "#1e3a8a"
+    },
+    "neutral": {
+      "background": "#ffffff",
+      "surface": "#f8fafc",
+      "border": "#e2e8f0",
+      "text_primary": "#0f172a",
+      "text_secondary": "#475569",
+      "text_muted": "#94a3b8"
+    }
+  },
+  "visual_enhancers": {
+    "shadows": {
+      "card": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+      "hover": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.05)",
+      "dropdown": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)"
+    },
+    "borders": {
+      "default": "1px solid #e2e8f0",
+      "active": "1px solid #2563eb"
+    },
+    "radius": {
+      "default": "0.375rem",
+      "card": "0.5rem",
+      "button": "0.375rem"
+    }
+  },
+  "layout_strategies": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "section_spacing": "py-16 md:py-24",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8",
+    "mega_menu": "grid grid-cols-12 gap-8 p-6 bg-white shadow-xl border-t border-slate-100"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-white hover:bg-primary/90 shadow-sm transition-all duration-200 font-semibold px-6 py-2.5 rounded-md",
+      "secondary": "bg-white text-primary border border-primary/20 hover:bg-primary/5 hover:border-primary/40 transition-all duration-200 font-medium px-6 py-2.5 rounded-md",
+      "ghost": "text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors duration-200 px-4 py-2 rounded-md"
+    },
+    "cards": {
+      "service": "group bg-white p-8 rounded-lg border border-slate-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all duration-300 relative overflow-hidden",
+      "feature": "bg-slate-50 p-6 rounded-lg border border-slate-100"
+    },
+    "inputs": {
+      "default": "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_bg": "https://images.unsplash.com/photo-1691161651055-0ba310da7bc8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBjb3Jwb3JhdGUlMjBvZmZpY2UlMjBhcmNoaXRlY3R1cmUlMjBibHVlJTIwd2hpdGUlMjBhYnN0cmFjdHxlbnwwfHx8fDE3NzE3Njk2NDB8MA&ixlib=rb-4.1.0&q=85",
+      "office_exterior": "https://images.unsplash.com/photo-1768425278997-b210b0d85c71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBjb3Jwb3JhdGUlMjBvZmZpY2UlMjBhcmNoaXRlY3R1cmUlMjBibHVlJTIwd2hpdGUlMjBhYnN0cmFjdHxlbnwwfHx8fDE3NzE3Njk2NDB8MA&ixlib=rb-4.1.0&q=85",
+      "team_meeting": "https://images.pexels.com/photos/8134019/pexels-photo-8134019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "founder_portrait": "https://images.unsplash.com/photo-1576558656222-ba66febe3dec?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMGhlYWRzaG90JTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcxNzY5NjQzfDA&ixlib=rb-4.1.0&q=85",
+      "principal_consultant": "https://images.pexels.com/photos/6572210/pexels-photo-6572210.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "testimonial_1": "https://images.unsplash.com/photo-1655249493799-9cee4fe983bb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMGhlYWRzaG90JTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcxNzY5NjQzfDA&ixlib=rb-4.1.0&q=85",
+      "testimonial_2": "https://images.unsplash.com/photo-1689600944138-da3b150d9cb8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMGhlYWRzaG90JTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcxNzY5NjQzfDA&ixlib=rb-4.1.0&q=85",
+      "about_hero": "https://images.pexels.com/photos/8134161/pexels-photo-8134161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "stroke-1.5 w-6 h-6 text-primary"
+    }
+  },
+  "content_strategy": {
+    "tone": "Professional, Authoritative, Helpful, Concise",
+    "key_messages": [
+      "Decades of Experience in Financial Excellence",
+      "Strategic Growth Partners, Not Just Accountants",
+      "Compliance, Clarity, and Confidence"
+    ]
+  },
+  "implementation_steps": [
+    "1. Setup Color Palette in tailwind.config.js (Primary: Blue-900, Secondary: Blue-600, Accent: Blue-50)",
+    "2. Configure Fonts (Aptos/Helvetica/Arial Stack) in index.css",
+    "3. Create Layout Component (Sticky Header with Mega Menu, Footer)",
+    "4. Build 'ServiceCard' and 'ResourceCard' reusable components",
+    "5. Implement Home Page (Hero -> About Preview -> Services Grid -> Testimonials -> CTA)",
+    "6. Implement Services Page (Overview + 8 Detail Pages routing)",
+    "7. Implement Resources Page (Fetch from public/data/resources.json)",
+    "8. Implement Contact Page (Form with validation)",
+    "9. Add SEO Meta Tags to all pages"
+  ],
+  "accessibility_guidelines": {
+    "contrast": "Ensure text-slate-500 is only used on white backgrounds. Use text-slate-600 for better readability.",
+    "interactive": "All interactive elements must have visible focus states (ring-2 ring-primary ring-offset-2).",
+    "aria": "Mega menu must use proper aria-expanded and aria-controls attributes."
+  },
+  "testing_requirements": {
+    "data_testid": "All interactive elements (buttons, links, inputs) must have a data-testid attribute (e.g., 'submit-contact-form', 'nav-link-services')."
+  },
+  "universal_guidelines": [
+    "Do not use generic center alignment for long text.",
+    "Avoid 'AI Slop' by using specific, high-quality copy, not generic placeholders.",
+    "Ensure the 'Resources' section handles loading states gracefully.",
+    "Mobile menu must be a Sheet component from Shadcn/UI.",
+    "Use 'sonner' for form submission success/error toasts."
+  ]
+}
