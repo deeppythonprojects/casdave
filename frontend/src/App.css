@@ -17,26 +17,13 @@
 
 .nav-link {
   position: relative;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .nav-link:hover {
-  color: #2563eb;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #2563eb;
-  transition: width 0.2s ease;
-}
-
-.nav-link:hover::after {
-  width: 100%;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .service-card {
