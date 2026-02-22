@@ -3,7 +3,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import SEO from '../components/common/SEO';
 import Button from '../components/common/Button';
 import ResourceCard from '../components/resources/ResourceCard';
-import { FaArrowRight, FaClock, FaUser, FaTag } from 'react-icons/fa';
+import { FaArrowRight, FaClock, FaUser } from 'react-icons/fa';
 
 const ResourceDetail = () => {
   const { slug } = useParams();
