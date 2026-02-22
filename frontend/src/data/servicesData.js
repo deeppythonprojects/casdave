@@ -147,7 +147,7 @@ export const servicesData = [
     title: 'Advisory Services',
     slug: 'advisory-services',
     icon: 'FaLightbulb',
-    image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1769740333462-9a63bfa914bc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHw0fHxidXNpbmVzcyUyMHRlYW0lMjBtZWV0aW5nJTIwY29sbGFib3JhdGlvbiUyMHZpYnJhbnR8ZW58MHx8fHwxNzcxNzcxMzkxfDA&ixlib=rb-4.1.0&q=85',
     shortDescription: 'Strategic business advisory including setup planning, estate and trust structuring, legal drafting, HUF and NGO formation, and FEMA compliance. We help optimize operations and support growth.',
     fullDescription: 'We offer a wide range of business and management consultancy services to our clients that includes business development strategies, cost control processes, strategic planning, project reporting and routine consultancy.',
     features: [
