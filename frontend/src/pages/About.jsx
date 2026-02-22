@@ -200,23 +200,27 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-spacing bg-primary text-white">
-        <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      {/* CTA Section with Background Image */}
+      <section className="relative section-spacing text-white overflow-hidden" style={{
+        backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600&q=80")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
+        <div className="container-custom text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 drop-shadow-lg">
             Let's Work Together
           </h2>
-          <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 text-white/95 max-w-2xl mx-auto drop-shadow-md">
             Experience the difference of working with dedicated professionals who truly care about your success.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link to="/services">
-              <Button variant="secondary" size="lg" dataTestId="about-cta-services" className="w-full sm:w-auto">
+              <Button variant="secondary" size="lg" dataTestId="about-cta-services" className="w-full sm:w-auto bg-white text-primary hover:bg-white/90">
                 Explore Our Services
               </Button>
             </Link>
             <Link to="/contact">
-              <Button variant="primary" size="lg" dataTestId="about-cta-contact" className="w-full sm:w-auto bg-white text-primary hover:bg-white/90">
+              <Button variant="primary" size="lg" dataTestId="about-cta-contact" className="w-full sm:w-auto bg-secondary hover:bg-secondary-hover border-2 border-white">
                 Contact Us
               </Button>
             </Link>
