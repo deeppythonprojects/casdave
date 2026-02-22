@@ -5,7 +5,7 @@ import { contactData } from '../../data/contactData';
 import { servicesData } from '../../data/servicesData';
 
 const Header = () => {
-  const [mobileMenuOpen, setMobileMenuOpen, useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const location = useLocation();
