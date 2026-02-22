@@ -229,28 +229,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="relative section-spacing overflow-hidden" style={{
-        backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1600&q=80")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}>
-        <div className="container-custom relative z-10">
-          <div className="text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 drop-shadow-lg">
-              Ready to Get Started?
-            </h2>
-            <p className="text-lg mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
-              Let's discuss how our expert chartered accountants can help your business thrive. Contact us today for a consultation.
-            </p>
-            <Link to="/contact">
-              <Button variant="secondary" size="lg" dataTestId="cta-contact-button" className="bg-white text-primary hover:bg-white/90">
-                Contact Us Today
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
     </>
   );
 };
