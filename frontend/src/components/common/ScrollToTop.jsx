@@ -1,17 +1,12 @@
-import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
-  useEffect(() => {
-    // Disable browser's scroll restoration
-    if ('scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual';
-    }
-    
-    // Scroll to top immediately
-    window.scrollTo({
+  useLayoutEffect(() => {
+    // Scroll to top synchronously before browser paint
+    document.documentElement.scrollTo({
       top: 0,
       left: 0,
       behavior: 'instant'
