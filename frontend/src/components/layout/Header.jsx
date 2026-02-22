@@ -129,8 +129,8 @@ const Header = () => {
               <Link
                 to="/resources"
                 className={`nav-link px-4 py-2 rounded-md text-sm font-medium tracking-wide uppercase ${
-                  isActive('/resources') || location.pathname.startsWith('/resources/') ? 'bg-white/10' : 'hover:bg-white/10'
-                } transition-colors`}
+                  isActive('/resources') || location.pathname.startsWith('/resources/') ? 'font-bold underline underline-offset-4' : ''
+                } transition-all`}
                 data-testid="nav-link-resources"
               >
                 Resources
