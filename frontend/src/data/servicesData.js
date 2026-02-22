@@ -105,7 +105,7 @@ export const servicesData = [
     title: 'Audit & Assurance Services',
     slug: 'audit-assurance',
     icon: 'FaClipboardCheck',
-    image: 'https://images.unsplash.com/photo-1554224311-beee460c201f?w=800&q=80',
+    image: 'https://images.pexels.com/photos/8117466/pexels-photo-8117466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     shortDescription: '30+ years of experience in statutory, tax, and internal audits for companies, banks, NGOs, and trusts. Our partners bring expertise in DISA and insurance risk management.',
     fullDescription: 'For over 30 years, our specialized audit team is entrusted to provide a comprehensive range of Audit and Assurance Services to our clients including Statutory Audits, Tax Audits, Internal Audits, and Stock Audits.',
     features: [
