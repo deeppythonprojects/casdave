@@ -129,17 +129,6 @@ const Header = () => {
                     </div>
                   </div>
                 )}
-                              {service.title}
-                            </h3>
-                            <p className="text-sm text-neutral-text-secondary line-clamp-2">
-                              {service.shortDescription}
-                            </p>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                )}
               </div>
 
               <Link
