@@ -44,7 +44,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Services Alternating Layout */}
       <section className="section-spacing bg-white">
         <div className="container-custom">
           <div className="text-center mb-16">
@@ -53,9 +53,30 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {servicesData.map((service) => (
-              <ServiceCard key={service.id} service={service} />
+          <div className="space-y-16">
+            {servicesData.map((service, index) => (
+              <div key={service.id} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-center`}>
+                <div className="w-full md:w-1/2">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-[400px] object-cover rounded-lg shadow-hover"
+                  />
+                </div>
+                <div className="w-full md:w-1/2">
+                  <h2 className="text-3xl font-bold text-neutral-text-primary mb-4">
+                    {service.title}
+                  </h2>
+                  <p className="text-lg text-neutral-text-secondary leading-relaxed mb-6">
+                    {service.shortDescription}
+                  </p>
+                  <Link to={`/services/${service.slug}`}>
+                    <Button variant="primary" dataTestId={`service-link-${service.slug}`}>
+                      Learn More
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             ))}
           </div>
         </div>
