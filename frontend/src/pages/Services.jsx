@@ -158,18 +158,22 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-spacing bg-white">
-        <div className="container-custom">
-          <div className="bg-primary rounded-2xl shadow-hover p-12 text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      {/* CTA Section with Background Image */}
+      <section className="relative section-spacing overflow-hidden" style={{
+        backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1600&q=80")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
+        <div className="container-custom relative z-10">
+          <div className="text-center text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 drop-shadow-lg">
               Need Expert Financial Guidance?
             </h2>
-            <p className="text-lg mb-8 text-white/90 max-w-2xl mx-auto">
+            <p className="text-lg mb-8 text-white/95 max-w-2xl mx-auto drop-shadow-md">
               Our team is ready to help you navigate complex financial challenges and achieve your business goals.
             </p>
             <Link to="/contact">
-              <Button variant="secondary" size="lg" dataTestId="services-cta-contact">
+              <Button variant="secondary" size="lg" dataTestId="services-cta-contact" className="bg-white text-primary hover:bg-white/90">
                 Get In Touch
               </Button>
             </Link>
