@@ -90,45 +90,50 @@ const ResourceDetail = () => {
         </div>
       </div>
 
-      {/* Article Header with Side-by-Side Layout */}
-      <section className="section-spacing bg-white">
+      {/* Article Header */}
+      <section className="py-12 bg-white">
         <div className="container-custom">
-          <article className="max-w-6xl mx-auto">
-            {/* Hero Section - Image Left, Content Right */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12">
-              {/* Featured Image - Left */}
+          <article className="max-w-5xl mx-auto">
+            {/* Hero Section - Compact Image Left, Content Right */}
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 mb-10 pb-10 border-b border-neutral-border">
+              {/* Featured Image - Left (Smaller) */}
               {resource.image && (
-                <div className="order-1">
+                <div className="lg:w-2/5 flex-shrink-0">
                   <img 
                     src={resource.image} 
                     alt={resource.title}
-                    className="w-full h-full object-cover rounded-lg shadow-hover min-h-[300px] lg:min-h-[400px]"
+                    className="w-full h-auto object-cover rounded-xl shadow-card aspect-[4/3]"
                   />
                 </div>
               )}
               
               {/* Content - Right */}
-              <div className="order-2 flex flex-col justify-center">
+              <div className="lg:w-3/5 flex flex-col justify-center">
                 {/* Category Badge */}
-                <div className="mb-4">
-                  <span className="inline-block bg-primary text-white text-sm font-semibold px-4 py-2 rounded-full">
+                <div className="mb-3">
+                  <span className="inline-block bg-primary text-white text-xs font-semibold px-3 py-1.5 rounded-full uppercase tracking-wide">
                     {resource.category}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-text-primary mb-6">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-text-primary mb-4 leading-tight">
                   {resource.title}
                 </h1>
 
+                {/* Excerpt */}
+                <p className="text-neutral-text-secondary text-base mb-5 leading-relaxed">
+                  {resource.excerpt}
+                </p>
+
                 {/* Meta Information */}
-                <div className="flex flex-wrap items-center gap-4 text-neutral-text-secondary mb-6">
+                <div className="flex flex-wrap items-center gap-4 text-sm text-neutral-text-muted mb-4">
                   <div className="flex items-center">
-                    <FaUser className="mr-2 text-primary" />
-                    <span>{resource.author}</span>
+                    <FaUser className="mr-2 text-primary" size={14} />
+                    <span className="font-medium">{resource.author}</span>
                   </div>
                   <div className="flex items-center">
-                    <FaClock className="mr-2 text-primary" />
+                    <FaClock className="mr-2 text-primary" size={14} />
                     <span>{formatDate(resource.date)}</span>
                   </div>
                 </div>
@@ -139,9 +144,9 @@ const ResourceDetail = () => {
                     {resource.tags.map((tag, index) => (
                       <span 
                         key={index}
-                        className="bg-neutral-surface text-neutral-text-secondary px-3 py-1 rounded-full text-sm border border-neutral-border"
+                        className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium"
                       >
-                        {tag}
+                        #{tag}
                       </span>
                     ))}
                   </div>
@@ -149,31 +154,82 @@ const ResourceDetail = () => {
               </div>
             </div>
 
-            {/* Article Content */}
-            <div className="max-w-4xl mx-auto">
+            {/* Article Content - Enhanced Formatting */}
+            <div className="max-w-none">
               <div 
-                className="prose prose-lg max-w-none"
-                style={{
-                  color: '#475569',
-                  lineHeight: '1.8'
-                }}
+                className="prose prose-lg max-w-none prose-headings:text-neutral-text-primary prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:border-b prose-h2:border-neutral-border prose-h2:pb-2 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:text-neutral-text-secondary prose-p:leading-relaxed prose-p:mb-4 prose-ul:my-4 prose-ul:pl-0 prose-li:text-neutral-text-secondary prose-li:mb-2 prose-ol:my-4 prose-strong:text-neutral-text-primary"
                 dangerouslySetInnerHTML={{ __html: resource.content }}
               />
             </div>
 
-            {/* CTA Box */}
-            <div className="mt-12 bg-accent p-8 rounded-lg border border-primary/20">
-              <h3 className="text-2xl font-bold text-primary mb-4">
-                Need Professional Assistance?
-              </h3>
-              <p className="text-neutral-text-secondary mb-6 leading-relaxed">
-                Our expert team at Dave & Associates is here to help you navigate complex financial and tax matters. Contact us for personalized consultation.
-              </p>
-              <Link to="/contact">
-                <Button variant="primary" dataTestId="resource-detail-contact">
-                  Contact Us Today
-                </Button>
-              </Link>
+            {/* Share & Tags Section */}
+            <div className="mt-10 pt-8 border-t border-neutral-border">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div>
+                  <p className="text-sm font-semibold text-neutral-text-primary mb-2">Share this article:</p>
+                  <div className="flex gap-3">
+                    <a 
+                      href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(resource.title)}&url=${encodeURIComponent(window.location.href)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-neutral-surface rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors text-neutral-text-secondary"
+                      data-testid="share-twitter"
+                    >
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a 
+                      href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-neutral-surface rounded-full flex items-center justify-center hover:bg-[#0077B5] hover:text-white transition-colors text-neutral-text-secondary"
+                      data-testid="share-linkedin"
+                    >
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a 
+                      href={`mailto:?subject=${encodeURIComponent(resource.title)}&body=${encodeURIComponent('Check out this article: ' + window.location.href)}`}
+                      className="w-10 h-10 bg-neutral-surface rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors text-neutral-text-secondary"
+                      data-testid="share-email"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    </a>
+                  </div>
+                </div>
+                {resource.tags && resource.tags.length > 0 && (
+                  <div>
+                    <p className="text-sm font-semibold text-neutral-text-primary mb-2">Topics:</p>
+                    <div className="flex flex-wrap gap-2">
+                      {resource.tags.map((tag, index) => (
+                        <span 
+                          key={index}
+                          className="bg-neutral-surface text-neutral-text-secondary px-3 py-1.5 rounded-lg text-sm border border-neutral-border hover:border-primary hover:text-primary transition-colors cursor-pointer"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* CTA Box - Enhanced */}
+            <div className="mt-10 bg-gradient-to-r from-primary to-primary-hover rounded-xl p-8 md:p-10 text-white">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div>
+                  <h3 className="text-2xl font-bold mb-2">
+                    Need Professional Assistance?
+                  </h3>
+                  <p className="text-white/90 leading-relaxed max-w-lg">
+                    Our expert team at Dave & Associates is here to help you navigate complex financial and tax matters.
+                  </p>
+                </div>
+                <Link to="/contact" className="flex-shrink-0">
+                  <Button variant="secondary" size="lg" dataTestId="resource-detail-contact" className="bg-white text-primary hover:bg-white/90 shadow-lg">
+                    Get Consultation
+                  </Button>
+                </Link>
+              </div>
             </div>
           </article>
         </div>
