@@ -14,10 +14,12 @@ const SEO = ({
   const defaultKeywords = 'chartered accountants ahmedabad, CA firm ahmedabad, tax consultancy, audit services, GST services, virtual CFO';
   const siteUrl = window.location.origin;
   
+  const pageTitle = String(title || defaultTitle);
+  
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title || defaultTitle}</title>
+      <title>{pageTitle}</title>
       <meta name="description" content={description || defaultDescription} />
       <meta name="keywords" content={keywords || defaultKeywords} />
       <meta name="author" content="Dave and Associates" />
