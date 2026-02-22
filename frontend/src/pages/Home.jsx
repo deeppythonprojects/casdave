@@ -224,17 +224,22 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-spacing bg-neutral-surface">
-        <div className="container-custom">
-          <div className="bg-white rounded-2xl shadow-hover p-12 text-center border border-primary/10">
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-text-primary mb-4">
+      <section className="relative section-spacing overflow-hidden" style={{
+        backgroundImage: 'url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1600&q=80")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/80" />
+        <div className="container-custom relative z-10">
+          <div className="text-center text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-lg text-neutral-text-secondary mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
               Let's discuss how our expert chartered accountants can help your business thrive. Contact us today for a consultation.
             </p>
             <Link to="/contact">
-              <Button variant="primary" size="lg" dataTestId="cta-contact-button">
+              <Button variant="secondary" size="lg" dataTestId="cta-contact-button" className="bg-white text-primary hover:bg-white/90">
                 Contact Us Today
               </Button>
             </Link>
