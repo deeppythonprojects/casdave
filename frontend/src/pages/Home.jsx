@@ -202,32 +202,52 @@ const Home = () => {
       )}
 
       {/* Quote Section with CTA */}
-      <section className="relative section-spacing text-white overflow-hidden" style={{
-        backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}>
-        <div className="container-custom relative z-10">
-          <div className="max-w-6xl mx-auto bg-primary/95 backdrop-blur-sm rounded-2xl shadow-2xl p-8 md:p-12 lg:p-16 border border-white/20">
-            <div className="text-center mb-8">
-              <svg className="w-16 h-16 mx-auto mb-6 text-white/60" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
-              </svg>
-              <blockquote className="text-2xl md:text-3xl font-medium mb-6 leading-relaxed drop-shadow-lg">
-                "We endeavor to constantly improve the quality of our services through adhering to integrity, professional excellence and proactive client centric approach."
-              </blockquote>
-              <p className="text-xl text-white/95 drop-shadow-md mb-8">Our Commitment to Excellence</p>
-            </div>
-            <div className="text-center">
-              <Link to="/contact">
-                <Button variant="secondary" size="lg" dataTestId="quote-cta-contact" className="bg-white text-primary hover:bg-white/90 shadow-lg">
-                  Contact Us Today
-                </Button>
-              </Link>
-            </div>
-          </div>
+      <section
+  className="relative py-16 text-white overflow-hidden"
+  style={{
+    backgroundImage:
+      'linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80")',
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  <div className="container-custom relative z-10">
+    <div className="max-w-7xl mx-auto bg-primary/30 backdrop-blur-lg rounded-2xl shadow-2xl px-10 py-8 border border-white/20">
+      
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+        
+        {/* Left Content */}
+        <div className="flex-1">
+          <blockquote className="text-xl md:text-2xl font-medium leading-relaxed">
+            "We endeavor to constantly improve the quality of our services through
+            adhering to integrity, professional excellence and a proactive
+            client-centric approach."
+          </blockquote>
+
+          <p className="mt-4 text-lg text-white/90 font-semibold">
+            Our Commitment to Excellence
+          </p>
         </div>
-      </section>
+
+        {/* Right Button */}
+        <div>
+          <Link to="/contact">
+            <Button
+              variant="secondary"
+              size="lg"
+              dataTestId="quote-cta-contact"
+              className="bg-white text-primary hover:bg-white/90 px-8 py-3 rounded-xl shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              Contact Us
+            </Button>
+          </Link>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
 
     </>
   );

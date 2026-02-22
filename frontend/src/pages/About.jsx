@@ -147,9 +147,12 @@ const About = () => {
             </p>
           </div>
 
-          <div className="space-y-32 max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {teamData.map((member, index) => (
-              <div key={member.id} className="bg-white rounded-xl border border-neutral-border shadow-card hover:shadow-hover transition-shadow overflow-hidden">
+              <div 
+                key={member.id} 
+                className="bg-white rounded-xl border border-neutral-border shadow-card hover:shadow-hover transition-shadow overflow-hidden mb-16"
+              >
                 <div className={`flex flex-col md:flex-row ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                   {/* Image with LinkedIn Hover - Equal width for both */}
                   <div className="md:w-2/5 relative group flex-shrink-0">

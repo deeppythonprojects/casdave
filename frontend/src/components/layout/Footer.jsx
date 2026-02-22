@@ -49,8 +49,8 @@ const Footer = () => {
                 <div>
                   <p>{contactData.address.line1}</p>
                   <p>{contactData.address.line2}</p>
-                  <p>{contactData.address.city} - {contactData.address.pincode}</p>
-                  <p>{contactData.address.state}, {contactData.address.country}</p>
+                  <p>{contactData.address.state}, {contactData.address.city}</p>
+                  <p>{contactData.address.pincode}</p>
                 </div>
               </div>
               <a href={`tel:${contactData.phone}`} className="flex items-center hover:text-primary transition-colors" data-testid="footer-phone">
@@ -87,7 +87,7 @@ const Footer = () => {
           </div>
 
           {/* Column 4: Services */}
-          <div>
+          {/* <div>
             <h3 className="text-lg font-semibold mb-4 text-neutral-text-primary">Our Services</h3>
             <nav className="space-y-2 text-sm">
               {servicesData.slice(0, 6).map((service) => (
@@ -101,10 +101,10 @@ const Footer = () => {
                 </Link>
               ))}
             </nav>
-          </div>
+          </div> */}
 
           {/* Column 5: Map */}
-          <div>
+          <div className='lg:col-span-2'>
             <h3 className="text-lg font-semibold mb-4 text-neutral-text-primary">Find Us</h3>
             <div className="rounded-lg overflow-hidden border border-neutral-border shadow-sm">
               <iframe
