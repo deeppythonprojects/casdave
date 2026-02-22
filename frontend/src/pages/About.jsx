@@ -147,17 +147,31 @@ const About = () => {
             </p>
           </div>
 
-          <div className="space-y-12 max-w-6xl mx-auto">
-            {teamData.map((member) => (
+          <div className="space-y-20 max-w-6xl mx-auto">
+            {teamData.map((member, index) => (
               <div key={member.id} className="bg-white rounded-lg border border-neutral-border shadow-card hover:shadow-hover transition-shadow overflow-hidden">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
-                  <div className="md:col-span-1">
+                <div className={`grid grid-cols-1 md:grid-cols-3 gap-0 ${index % 2 === 1 ? 'md:flex md:flex-row-reverse' : ''}`}>
+                  {/* Image with LinkedIn Hover */}
+                  <div className="md:col-span-1 relative group">
                     <img 
                       src={member.image} 
                       alt={member.name}
                       className="w-full h-full object-cover min-h-[300px]"
                     />
+                    {/* LinkedIn Hover Overlay */}
+                    <a 
+                      href={member.linkedin} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="absolute inset-0 bg-gray-800/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                      data-testid={`team-image-linkedin-${member.id}`}
+                    >
+                      <div className="bg-white/90 p-4 rounded-full shadow-lg transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                        <FaLinkedin className="text-[#0077B5] text-4xl" />
+                      </div>
+                    </a>
                   </div>
+                  {/* Content */}
                   <div className="md:col-span-2 p-8">
                     <h3 className="text-2xl font-bold text-neutral-text-primary mb-1">
                       {member.name}
