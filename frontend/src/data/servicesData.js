@@ -84,7 +84,7 @@ export const servicesData = [
     title: 'ROC & Company Law Services',
     slug: 'roc-company-law',
     icon: 'FaBuilding',
-    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1565688527174-775059ac429c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHRlYW0lMjBtZWV0aW5nJTIwY29sbGFib3JhdGlvbiUyMHZpYnJhbnR8ZW58MHx8fHwxNzcxNzcxMzkxfDA&ixlib=rb-4.1.0&q=85',
     shortDescription: 'We provide end-to-end legal compliance services, covering company formation, ROC filings, and company conversions, along with IPR registration, advisory, and representation.',
     fullDescription: 'We have a dedicated team to take care of all the ROC related work of our clients. Our wide range of services in this domain starts with Incorporation services of Private Limited and Limited Companies.',
     features: [
