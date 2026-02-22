@@ -14,8 +14,8 @@ import './App.css';
 
 function App() {
   return (
-    <HelmetProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <HelmetProvider>
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -28,8 +28,8 @@ function App() {
           </Routes>
         </Layout>
         <Toaster position="top-right" richColors />
-      </BrowserRouter>
-    </HelmetProvider>
+      </HelmetProvider>
+    </BrowserRouter>
   );
 }
 
