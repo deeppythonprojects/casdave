@@ -30,11 +30,15 @@ const Services = () => {
         schemaMarkup={schemaMarkup}
       />
 
-      {/* Page Hero */}
-      <section className="bg-primary text-white py-20">
-        <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
+      {/* Page Hero with Background Image */}
+      <section className="relative py-20 overflow-hidden" style={{
+        backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1600&q=80")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
+        <div className="container-custom text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg">Our Services</h1>
+          <p className="text-xl text-white/95 max-w-3xl mx-auto drop-shadow-md">
             Comprehensive financial services tailored to meet your business needs
           </p>
         </div>
