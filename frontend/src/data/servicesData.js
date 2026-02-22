@@ -4,7 +4,7 @@ export const servicesData = [
     title: 'Direct Taxes',
     slug: 'direct-taxes',
     icon: 'FaFileInvoiceDollar',
-    image: 'https://images.unsplash.com/photo-1554224311-beee460c201f?w=800&q=80',
+    image: 'https://images.pexels.com/photos/6694569/pexels-photo-6694569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     shortDescription: 'Comprehensive direct tax solutions including income tax filing, TDS compliance, corporate taxation, and representation in assessments and appeals.',
     fullDescription: 'In this domain we provide wide range of services that ensure your tax compliance and optimize your tax liabilities through strategic planning.',
     features: [
