@@ -16,23 +16,26 @@ Build a professional, SEO-optimized corporate website for "Dave & Associates", a
 - [x] Home page with hero, about preview, services grid, testimonials, CTA
 - [x] About Us page with company overview, mission/vision, team section
 - [x] Services overview page with 8 service categories
-- [x] Individual service detail pages
-- [x] Resources page with article listings
-- [x] Resource detail pages
+- [x] Individual service detail pages with background image hero
+- [x] Resources page with article listings and category filtering
+- [x] Resource detail pages with side-by-side layout
 - [x] Contact page with form and Google Map
 
 ### Components
 - [x] Header with navigation and services dropdown
-- [x] Footer with comprehensive links
+- [x] Footer with white bg, black fonts, and Google Maps iframe
 - [x] Reusable Button, Card components
 - [x] SEO component (basic implementation)
 
 ### Recent Updates (Dec 2025)
-- [x] Team section redesigned - alternating image layout (Founder LEFT, Principal Consultant RIGHT)
-- [x] LinkedIn hover effect on team member images (grey overlay + blue LinkedIn icon)
-- [x] Increased spacing between team members
-- [x] Background images on page headers
-- [x] Reduced blue dominance, added professional imagery
+- [x] Team section - equal image widths (2/5 ratio), increased spacing
+- [x] Team section - alternating layout (Founder LEFT, Principal Consultant RIGHT)
+- [x] LinkedIn hover effect on team member images
+- [x] Service detail pages - image as hero background
+- [x] Service detail CTA - background image instead of blue
+- [x] Footer redesign - white background, black fonts, Google Maps iframe
+- [x] Resource detail - side-by-side layout (image left, text right)
+- [x] Home quote block - increased width
 
 ## Prioritized Backlog
 
