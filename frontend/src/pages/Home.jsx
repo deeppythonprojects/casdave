@@ -196,16 +196,21 @@ const Home = () => {
       )}
 
       {/* Quote Section */}
-      <section className="section-spacing bg-primary text-white">
-        <div className="container-custom">
+      <section className="relative section-spacing text-white overflow-hidden" style={{
+        backgroundImage: 'url("https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
+        <div className="absolute inset-0 bg-primary/85" />
+        <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <svg className="w-16 h-16 mx-auto mb-6 text-white/30" fill="currentColor" viewBox="0 0 24 24">
+            <svg className="w-16 h-16 mx-auto mb-6 text-white/40" fill="currentColor" viewBox="0 0 24 24">
               <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
             </svg>
             <blockquote className="text-2xl md:text-3xl font-medium mb-6 leading-relaxed">
               "We endeavor to constantly improve the quality of our services through adhering to integrity, professional excellence and proactive client centric approach."
             </blockquote>
-            <p className="text-xl text-white/80">Our Commitment to Excellence</p>
+            <p className="text-xl text-white/90">Our Commitment to Excellence</p>
           </div>
         </div>
       </section>
