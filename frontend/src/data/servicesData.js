@@ -43,7 +43,7 @@ export const servicesData = [
     title: 'Project Financing',
     slug: 'project-financing',
     icon: 'FaChartLine',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1622675363311-3e1904dc1885?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMHRlYW0lMjBtZWV0aW5nJTIwY29sbGFib3JhdGlvbiUyMHZpYnJhbnR8ZW58MHx8fHwxNzcxNzcxMzkxfDA&ixlib=rb-4.1.0&q=85',
     shortDescription: 'End-to-end support in securing business loans, project reports, CMA data and legal drafting. We assist with working capital renewals and act as liaisons with banks for funding needs.',
     fullDescription: 'Under this domain we offer various services that include assisting New Project Setups, Ventures, Green Field Projects and MSMEs through providing them with Project Feasibility Study Reports.',
     features: [
