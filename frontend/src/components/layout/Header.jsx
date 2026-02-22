@@ -96,8 +96,8 @@ const Header = () => {
                 <Link
                   to="/services"
                   className={`nav-link px-4 py-2 rounded-md text-sm font-medium tracking-wide uppercase inline-flex items-center ${
-                    isActive('/services') || location.pathname.startsWith('/services/') ? 'bg-white/10' : 'hover:bg-white/10'
-                  } transition-colors`}
+                    isActive('/services') || location.pathname.startsWith('/services/') ? 'font-bold underline underline-offset-4' : ''
+                  } transition-all`}
                   data-testid="nav-link-services"
                 >
                   Services
