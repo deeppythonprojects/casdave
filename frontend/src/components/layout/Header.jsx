@@ -106,14 +106,14 @@ const Header = () => {
                 
                 {/* Mega Menu */}
                 {servicesMenuOpen && (
-                  <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-0 w-auto min-w-[600px] bg-white shadow-dropdown border-t-2 border-primary rounded-b-lg z-50">
-                    <div className="py-6 px-6">
-                      <div className="grid grid-cols-2 gap-3">
+                  <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-0 w-auto min-w-[400px] bg-white shadow-dropdown border-t-2 border-primary rounded-b-lg z-50">
+                    <div className="py-4 px-4">
+                      <div className="flex flex-col gap-1">
                         {servicesData.map((service) => (
                           <Link
                             key={service.id}
                             to={`/services/${service.slug}`}
-                            className="px-4 py-3 rounded-md hover:bg-primary hover:text-white transition-all text-neutral-text-primary font-medium"
+                            className="px-4 py-3 rounded-md hover:bg-primary hover:text-white transition-all text-neutral-text-primary font-medium text-left"
                             onClick={() => setServicesMenuOpen(false)}
                             data-testid={`mega-menu-${service.slug}`}
                           >
