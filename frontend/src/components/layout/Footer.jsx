@@ -145,7 +145,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-neutral-text-secondary">
             <p>© 2026 Dave & Associates Chartered Accountants. All Rights Reserved.</p>
             <p className="mt-2 md:mt-0">
-              Developed by <span className="text-neutral-text-primary font-medium">Deep M. Bhatt</span>
+              Developed by <span className="text-neutral-text-primary font-medium"><a href="https://www.linkedin.com/in/deep-m-bhatt-59b014262/" target="_blank" rel="noopener noreferrer">Deep M. Bhatt</a></span>
             </p>
           </div>
         </div>
