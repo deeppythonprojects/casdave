@@ -88,13 +88,29 @@ const ServiceDetail = () => {
             <h2 className="text-3xl font-bold text-neutral-text-primary mb-6">
               Key Features & Offerings
             </h2>
-            <div className="space-y-4 mb-12">
-              {service.features.map((feature, index) => (
-                <div key={index} className="flex items-start bg-neutral-surface p-4 rounded-lg border border-neutral-border">
-                  <FaCheckCircle className="text-primary mr-4 mt-1 flex-shrink-0" size={20} />
-                  <p className="text-neutral-text-secondary leading-relaxed">{feature}</p>
-                </div>
-              ))}
+            <div className="flex flex-col gap-4 mb-12">
+              {service.features.map((feature, index) => {
+                const parts = feature.split('—');
+                const hasSplit = parts.length > 1;
+                return (
+                  <div
+                    key={index}
+                    className="flex items-start bg-neutral-surface p-5 rounded-lg border border-neutral-border hover:border-primary hover:scale-[1.01] transition-all duration-200"
+                  >
+                    <FaCheckCircle className="text-primary mr-4 mt-1 flex-shrink-0" size={20} />
+                    <p className="text-neutral-text-secondary leading-relaxed">
+                      {hasSplit ? (
+                        <>
+                          <span className="font-semibold text-neutral-text-primary">{parts[0].trim()} —</span>
+                          {parts.slice(1).join('—')}
+                        </>
+                      ) : (
+                        feature
+                      )}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
 
             <div className="bg-accent p-8 rounded-lg border border-primary/20">
@@ -158,7 +174,7 @@ const ServiceDetail = () => {
           <div 
             className="rounded-2xl shadow-hover p-12 text-center text-white overflow-hidden relative"
             style={{
-              backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1600&q=80")',
+              backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("/images/books.webp")',
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}

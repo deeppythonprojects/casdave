@@ -111,7 +111,7 @@ const Home = () => {
             </div>
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" 
+                src="/images/cabin.webp" 
                 alt="Professional team meeting" 
                 className="rounded-lg shadow-hover w-full h-auto"
               />
@@ -119,26 +119,26 @@ const Home = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border border-blue-200 text-center">
-              <FaAward className="w-10 h-10 text-primary mb-4 mx-auto" />
-              <h3 className="text-2xl font-bold text-primary mb-2">10+</h3>
-              <p className="text-neutral-text-secondary">Years of Excellence</p>
-            </div>
-            <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg border border-green-200 text-center">
-              <FaUsers className="w-10 h-10 text-green-700 mb-4 mx-auto" />
-              <h3 className="text-2xl font-bold text-green-700 mb-2">500+</h3>
-              <p className="text-neutral-text-secondary">Satisfied Clients</p>
-            </div>
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg border border-purple-200 text-center">
-              <FaCheckCircle className="w-10 h-10 text-purple-700 mb-4 mx-auto" />
-              <h3 className="text-2xl font-bold text-purple-700 mb-2">100%</h3>
-              <p className="text-neutral-text-secondary">Client Satisfaction</p>
-            </div>
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg border border-orange-200 text-center">
-              <FaHandshake className="w-10 h-10 text-orange-700 mb-4 mx-auto" />
-              <h3 className="text-2xl font-bold text-orange-700 mb-2">8+</h3>
-              <p className="text-neutral-text-secondary">Service Categories</p>
-            </div>
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border border-blue-200 text-center hover:shadow-lg hover:scale-105 hover:border-primary transition-all duration-300 cursor-default">
+                <FaAward className="w-10 h-10 text-primary mb-4 mx-auto" />
+                <h3 className="text-2xl font-bold text-primary mb-2">10+</h3>
+                <p className="text-neutral-text-secondary">Years of Experience</p>
+              </div>
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border border-blue-200 text-center hover:shadow-lg hover:scale-105 hover:border-primary transition-all duration-300 cursor-default">
+                <FaUsers className="w-10 h-10 text-primary-700 mb-4 mx-auto" />
+                <h3 className="text-2xl font-bold text-primary-700 mb-2">24/7</h3>
+                <p className="text-neutral-text-secondary">Client Support</p>
+              </div>
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border border-blue-200 text-center hover:shadow-lg hover:scale-105 hover:border-primary transition-all duration-300 cursor-default">
+                <FaCheckCircle className="w-10 h-10 text-primary mb-4 mx-auto" />
+                <h3 className="text-2xl font-bold text-primary mb-2">100%</h3>
+                <p className="text-neutral-text-secondary">Client Satisfaction</p>
+              </div>
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border border-blue-200 text-center hover:shadow-lg hover:scale-105 hover:border-primary transition-all duration-300 cursor-default">
+                <FaHandshake className="w-10 h-10 text-primary-700 mb-4 mx-auto" />
+                <h3 className="text-2xl font-bold text-primary-700 mb-2">8+</h3>
+                <p className="text-neutral-text-secondary">Service Categories</p>
+              </div>
           </div>
         </div>
       </section>

@@ -219,7 +219,7 @@ const About = () => {
 
       {/* CTA Section with Background Image */}
       <section className="relative section-spacing text-white overflow-hidden" style={{
-        backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600&q=80")',
+        backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/waiting.webp")',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>

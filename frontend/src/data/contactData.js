@@ -2,7 +2,7 @@ export const contactData = {
   companyName: 'Dave & Associates',
   companyFullName: 'Dave & Associates Chartered Accountants',
   email: 'office@casdave.co.in',
-  phone: '+91 79 40329623',
+  phone: '+91 7940329623',
   address: {
     line1: '208, Maurya Complex, Navjeevan Press Road',
     line2: 'Nr. Incometax Cross Road',
@@ -15,9 +15,9 @@ export const contactData = {
   website: 'www.casdave.co.in',
   social: {
     facebook: '#',
-    linkedin: '#'
+    linkedin: 'https://www.linkedin.com/in/ca-sarang-dave-888b0269/'
   },
-  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.9876543210!2d72.5698765!3d23.0225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAxJzIxLjAiTiA3MsKwMzQnMTEuNiJF!5e0!3m2!1sen!2sin!4v1234567890',
+  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6998.775614424354!2d72.567797!3d23.042533!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85006fa5affb%3A0xbc43d4f068d46568!2sKAUSHIK%20S.%20SHETH%20%26%20CO.%20CHARTERED%20ACCOUNTANTS!5e1!3m2!1sen!2sin!4v1772816688237!5m2!1sen!2sin',
   officeHours: 'Monday - Saturday: 10:00 AM - 7:00 PM',
   serviceInterests: [
     'Direct Taxes',

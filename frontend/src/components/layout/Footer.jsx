@@ -10,38 +10,54 @@ const Footer = () => {
       <div className="container-custom py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Column 1: About */}
-          <div className="lg:col-span-1">
-            <h2 className="text-xl font-bold mb-4 text-neutral-text-primary">DAVE & ASSOCIATES</h2>
-            <p className="text-sm text-neutral-text-secondary mb-4">
-              Chartered Accountants
-            </p>
-            <p className="text-sm text-neutral-text-secondary mb-6 leading-relaxed">
-              Leading chartered accountancy firm in Ahmedabad providing expert financial services with utmost accuracy and integrity.
-            </p>
-            <div className="flex space-x-4">
-              <a 
-                href={contactData.social.facebook} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="w-10 h-10 bg-neutral-surface rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors text-neutral-text-secondary"
-                data-testid="footer-facebook"
-              >
-                <FaFacebook size={18} />
-              </a>
-              <a 
-                href={contactData.social.linkedin} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="w-10 h-10 bg-neutral-surface rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors text-neutral-text-secondary"
-                data-testid="footer-linkedin"
-              >
-                <FaLinkedin size={18} />
-              </a>
-            </div>
+          <div className="lg:col-span-2">
+      <img 
+        src="/images/logo_dna.webp" 
+        alt="Dave & Associates Logo" 
+        className="h-20 mb-4"
+      />
+      <div className="space-y-3 text-sm text-neutral-text-secondary mb-6">
+        <div className="flex items-start">
+          <FaMapMarkerAlt className="mr-3 mt-1 flex-shrink-0 text-primary" />
+          <div>
+            <p>{contactData.address.line1}</p>
+            <p>{contactData.address.line2}</p>
+            <p>{contactData.address.state}, {contactData.address.city},{contactData.address.pincode}</p>
           </div>
+        </div>
+        <a href={`tel:${contactData.phone}`} className="flex items-center hover:text-primary transition-colors" data-testid="footer-phone">
+          <FaPhone className="mr-3 text-primary" />
+          {contactData.phone}
+        </a>
+        <a href={`mailto:${contactData.email}`} className="flex items-center hover:text-primary transition-colors" data-testid="footer-email">
+          <FaEnvelope className="mr-3 text-primary" />
+          {contactData.email}
+        </a>
+      </div>
+      {/* <div className="flex space-x-4">
+        <a 
+          href={contactData.social.facebook} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="w-10 h-10 bg-neutral-surface rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors text-neutral-text-secondary"
+          data-testid="footer-facebook"
+        >
+          <FaFacebook size={18} />
+        </a>
+        <a 
+          href={contactData.social.linkedin} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="w-10 h-10 bg-neutral-surface rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors text-neutral-text-secondary"
+          data-testid="footer-linkedin"
+        >
+          <FaLinkedin size={18} />
+        </a>
+      </div> */}
+    </div>
 
           {/* Column 2: Contact Info */}
-          <div>
+          {/* <div>
             <h3 className="text-lg font-semibold mb-4 text-neutral-text-primary">Contact Us</h3>
             <div className="space-y-3 text-sm text-neutral-text-secondary">
               <div className="flex items-start">
@@ -62,7 +78,7 @@ const Footer = () => {
                 {contactData.email}
               </a>
             </div>
-          </div>
+          </div> */}
 
           {/* Column 3: Quick Links */}
           <div>

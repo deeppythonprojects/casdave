@@ -33,20 +33,20 @@ const Header = () => {
         <div className="container-custom">
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center space-x-6">
-              <a href={`tel:${contactData.phone}`} className="flex items-center hover:text-secondary transition-colors" data-testid="header-phone">
+              <a href={`tel:${contactData.phone}`} className="flex items-center hover:text-primary transition-colors" data-testid="header-phone">
                 <FaPhone className="mr-2" size={12} />
                 {contactData.phone}
               </a>
-              <a href={`mailto:${contactData.email}`} className="flex items-center hover:text-secondary transition-colors" data-testid="header-email">
+              <a href={`mailto:${contactData.email}`} className="flex items-center hover:text-primary transition-colors" data-testid="header-email">
                 <FaEnvelope className="mr-2" size={12} />
                 {contactData.email}
               </a>
             </div>
             <div className="flex items-center space-x-4">
-              <a href={contactData.social.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors" data-testid="header-facebook">
+              <a href={contactData.social.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" data-testid="header-facebook">
                 <FaFacebook size={16} />
               </a>
-              <a href={contactData.social.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors" data-testid="header-linkedin">
+              <a href={contactData.social.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" data-testid="header-linkedin">
                 <FaLinkedin size={16} />
               </a>
             </div>
@@ -55,14 +55,17 @@ const Header = () => {
       </div>
 
       {/* Main Navigation */}
-      <header className="bg-primary text-white sticky top-0 z-50 shadow-lg">
+      <header className="bg-white text-black sticky top-0 z-50 shadow-lg">
         <nav className="container-custom">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3" onClick={closeMobileMenu} data-testid="header-logo">
               <div>
-                <h1 className="text-xl md:text-2xl font-bold tracking-tight">DAVE & ASSOCIATES</h1>
-                <p className="text-xs text-white/80">Chartered Accountants</p>
+                <img 
+                  src="/images/logo_dna.png" 
+                  alt="Dave & Associates Logo"
+                  className="h-16"
+                />
               </div>
             </Link>
 
@@ -70,8 +73,8 @@ const Header = () => {
             <div className="hidden lg:flex items-center space-x-1">
               <Link
                 to="/"
-                className={`nav-link px-4 py-2 rounded-md text-sm font-medium tracking-wide uppercase ${
-                  isActive('/') ? 'font-bold underline underline-offset-4' : ''
+                className={`nav-link px-4 py-2 rounded-md text-sm font-bold tracking-wide uppercase ${
+                  isActive('/') ? 'font-bold underline underline-offset-4 text-primary' : ''
                 } transition-all`}
                 data-testid="nav-link-home"
               >
@@ -79,8 +82,8 @@ const Header = () => {
               </Link>
               <Link
                 to="/about"
-                className={`nav-link px-4 py-2 rounded-md text-sm font-medium tracking-wide uppercase ${
-                  isActive('/about') ? 'font-bold underline underline-offset-4' : ''
+                className={`nav-link px-4 py-2 rounded-md text-sm font-bold tracking-wide uppercase ${
+                  isActive('/about') ? 'font-bold underline underline-offset-4 text-primary' : ''
                 } transition-all`}
                 data-testid="nav-link-about"
               >
@@ -95,8 +98,8 @@ const Header = () => {
               >
                 <Link
                   to="/services"
-                  className={`nav-link px-4 py-2 rounded-md text-sm font-medium tracking-wide uppercase inline-flex items-center ${
-                    isActive('/services') || location.pathname.startsWith('/services/') ? 'font-bold underline underline-offset-4' : ''
+                  className={`nav-link px-4 py-2 rounded-md text-sm font-bold tracking-wide uppercase inline-flex items-center ${
+                    isActive('/services') || location.pathname.startsWith('/services/') ? 'font-bold underline underline-offset-4  text-primary' : ''
                   } transition-all`}
                   data-testid="nav-link-services"
                 >
@@ -106,30 +109,41 @@ const Header = () => {
                 
                 {/* Mega Menu */}
                 {servicesMenuOpen && (
-                  <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-0 w-auto min-w-[400px] bg-white shadow-dropdown border-t-2 border-primary rounded-b-lg z-50">
-                    <div className="py-4 px-4">
-                      <div className="flex flex-col gap-1">
-                        {servicesData.map((service) => (
-                          <Link
-                            key={service.id}
-                            to={`/services/${service.slug}`}
-                            className="px-4 py-3 rounded-md hover:bg-primary hover:text-white transition-all text-neutral-text-primary font-medium text-left"
-                            onClick={() => setServicesMenuOpen(false)}
-                            data-testid={`mega-menu-${service.slug}`}
-                          >
-                            {service.title}
-                          </Link>
-                        ))}
+                    <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-0 w-auto min-w-[400px] bg-white shadow-dropdown border-t-2 border-primary rounded-b-lg z-50">
+                      <div className="py-4 px-4">
+                        <div className="flex flex-col gap-1">
+                          <div className="border-b border-neutral-border mb-1 pb-1">
+                            <Link
+                              to="/services"
+                              className="px-4 py-3 rounded-md hover:bg-primary hover:text-white transition-all text-primary font-bold text-left flex items-center gap-2"
+                              onClick={() => setServicesMenuOpen(false)}
+                              data-testid="mega-menu-all-services"
+                            >
+
+                              All Services
+                            </Link>
+                          </div>
+                          {servicesData.map((service) => (
+                            <Link
+                              key={service.id}
+                              to={`/services/${service.slug}`}
+                              className="px-4 py-3 rounded-md hover:bg-primary hover:text-white transition-all text-neutral-text-primary font-bold text-left"
+                              onClick={() => setServicesMenuOpen(false)}
+                              data-testid={`mega-menu-${service.slug}`}
+                            >
+                              {service.title}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                )}
+                  )}
               </div>
 
               <Link
                 to="/resources"
-                className={`nav-link px-4 py-2 rounded-md text-sm font-medium tracking-wide uppercase ${
-                  isActive('/resources') || location.pathname.startsWith('/resources/') ? 'font-bold underline underline-offset-4' : ''
+                className={`nav-link px-4 py-2 rounded-md text-sm font-bold tracking-wide uppercase ${
+                  isActive('/resources') || location.pathname.startsWith('/resources/') ? 'font-bold underline underline-offset-4  text-primary' : ''
                 } transition-all`}
                 data-testid="nav-link-resources"
               >
@@ -137,7 +151,7 @@ const Header = () => {
               </Link>
               <Link
                 to="/contact"
-                className="bg-secondary hover:bg-secondary-hover px-6 py-2.5 rounded-md text-sm font-semibold tracking-wide uppercase transition-colors ml-2"
+                className="bg-primary hover:bg-primary-hover px-6 py-2.5 rounded-md text-sm font-semibold tracking-wide uppercase transition-colors ml-2 text-white"
                 data-testid="nav-link-contact"
               >
                 Contact Us
@@ -147,7 +161,7 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMobileMenu}
-              className="lg:hidden text-white focus:outline-none"
+              className="lg:hidden text-primary focus:outline-none"
               data-testid="mobile-menu-button"
             >
               {mobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -202,6 +216,16 @@ const Header = () => {
               </button>
               {mobileServicesOpen && (
                 <div className="ml-4 mt-2 space-y-2">
+                  <div className="border-b border-neutral-border mb-1 pb-1">
+                    <Link
+                      to="/services"
+                      className="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-primary hover:bg-neutral-surface rounded-md transition-colors"
+                      onClick={closeMobileMenu}
+                      data-testid="mobile-nav-all-services"
+                    >
+                      All Services
+                    </Link>
+                  </div>
                   {servicesData.map((service) => (
                     <Link
                       key={service.id}
