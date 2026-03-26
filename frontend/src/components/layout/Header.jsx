@@ -43,9 +43,9 @@ const Header = () => {
               </a>
             </div>
             <div className="flex items-center space-x-4">
-              <a href={contactData.social.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" data-testid="header-facebook">
+              {/* <a href={contactData.social.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" data-testid="header-facebook">
                 <FaFacebook size={16} />
-              </a>
+              </a> */}
               <a href={contactData.social.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" data-testid="header-linkedin">
                 <FaLinkedin size={16} />
               </a>

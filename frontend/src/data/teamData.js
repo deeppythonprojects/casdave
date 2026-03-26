@@ -1,7 +1,7 @@
 export const teamData = [
   {
     id: 'sarang-dave',
-    name: 'CA Sarang Dave',
+    name: 'CA Sarang M. Dave',
     title: 'Founder',
     qualifications: 'FCA, M.Com., DISA',
     image: '/images/sarang_dave.webp',

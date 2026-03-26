@@ -108,11 +108,11 @@ const Home = () => {
                 Dave & Associates,<br/> Chartered Accountants
               </h2>
               <p className="text-lg text-neutral-text-secondary leading-relaxed mb-6 text-justify">
-                <b>"Your Trusted Financial Advisors"</b> We are a leading Chartered Accountant firm in Ahmedabad, Gujarat, India led by a young and dynamic team of Chartered Accountants. Our practice is built on the fundamental values of integrity, transparency, and professional excellence, which form the cornerstone of every client relationship we undertake. We believe that trust and clarity are essential in financial matters, and therefore strive to maintain the highest standards of ethical conduct and openness in all our engagements.
+                <b>"Your Trusted Financial Advisors"</b><br></br> We are a leading Chartered Accountant firm in Ahmedabad, Gujarat, India led by a young and dynamic team of Chartered Accountants. Our practice is built on the fundamental values of integrity, transparency, and professional excellence, which form the cornerstone of every client relationship we undertake. We believe that trust and clarity are essential in financial matters, and therefore strive to maintain the highest standards of ethical conduct and openness in all our engagements.
               </p>
-              <p className="text-lg text-neutral-text-secondary leading-relaxed mb-8 text-justify">
+              {/* <p className="text-lg text-neutral-text-secondary leading-relaxed mb-8 text-justify">
                 We provide expert and professional services with that extra personal touch which makes our goodwill strong. The firm is founded by CA Sarang M. Dave, who brings over a decade of experience in almost every area of professional work.
-              </p>
+              </p> */}
               <Link to="/about">
                 <Button variant="primary" dataTestId="about-learn-more">
                   Learn More About Us
