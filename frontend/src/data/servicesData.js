@@ -23,7 +23,7 @@ export const servicesData = [
     title: 'Indirect Tax, Customs & Trade Advisory',
     slug: 'indirect-taxes',
     icon: 'FaReceipt',
-    image: './images/stock1.webp',
+    image: 'https://images.pexels.com/photos/7821684/pexels-photo-7821684.jpeg',
     shortDescription: 'Our team offers specialized advisory and compliance services in the field of GST, Customs, and Foreign Trade regulations, helping businesses maintain regulatory compliance while improving tax efficiency.',
     fullDescription: 'Over the years, we have provided comprehensive services in this domain:',
     features: [
