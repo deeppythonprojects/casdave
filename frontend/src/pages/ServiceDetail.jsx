@@ -88,7 +88,7 @@ const ServiceDetail = () => {
             <h2 className="text-3xl font-bold text-neutral-text-primary mb-6">
               Key Features & Offerings
             </h2>
-            <div className="flex flex-col gap-4 mb-12">
+            <div className="flex flex-col gap-4">
               {service.features.map((feature, index) => {
                 const parts = feature.split('—');
                 const hasSplit = parts.length > 1;
@@ -113,7 +113,7 @@ const ServiceDetail = () => {
               })}
             </div>
 
-            <div className="bg-accent p-8 rounded-lg border border-primary/20">
+            {/* <div className="bg-accent p-8 rounded-lg border border-primary/20">
               <h3 className="text-2xl font-bold text-primary mb-4">
                 Why Choose Dave & Associates for {service.title}?
               </h3>
@@ -125,7 +125,7 @@ const ServiceDetail = () => {
                   Get Expert Consultation
                 </Button>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

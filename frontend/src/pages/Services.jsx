@@ -39,7 +39,7 @@ const Services = () => {
         <div className="container-custom text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg">Our Services</h1>
           <p className="text-xl text-white/95 max-w-3xl mx-auto drop-shadow-md">
-            Comprehensive financial services tailored to meet your business needs
+            Comprehensive professional services to meet your diverse business needs
           </p>
         </div>
       </section>
@@ -49,7 +49,7 @@ const Services = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <p className="text-lg text-neutral-text-secondary max-w-4xl mx-auto leading-relaxed">
-              From taxation and compliance to strategic financial advisory, we offer a complete suite of professional services designed to help your business thrive. Our expert team brings decades of combined experience across all areas of chartered accountancy.
+              From taxation and compliance to strategic financial advisory, we offer a complete suite of professional services designed to help your business thrive. Our expert team brings decades of combined experience across diverse areas of taxation, compliance, and business advisory.
             </p>
           </div>
 

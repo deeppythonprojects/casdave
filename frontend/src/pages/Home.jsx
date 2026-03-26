@@ -68,20 +68,30 @@ const Home = () => {
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight drop-shadow-lg">
-              Your Trusted Financial Partners in Ahmedabad
+              Beyond Compliance{" "}
+              <span className="inline-flex items-end gap-1 ml-1">
+                <span className="w-2 h-2 rounded-full bg-orange-500 translate-y-1"></span>
+                <span className="w-2 h-2 rounded-full bg-white translate-y-1"></span>
+                <span className="w-2 h-2 rounded-full bg-green-500 translate-y-1"></span>
+              </span>
+              <br />
+              Delivering Value{" "}
+              <span className="inline-flex items-end gap-1 ml-1">
+                <span className="w-2 h-2 rounded-full bg-orange-500 translate-y-1"></span>
+                <span className="w-2 h-2 rounded-full bg-white translate-y-1"></span>
+                <span className="w-2 h-2 rounded-full bg-green-500 translate-y-1"></span>
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white/95 leading-relaxed drop-shadow-md">
-              Expert Chartered Accountants providing comprehensive tax, audit, and business advisory services with utmost accuracy and integrity.
-            </p>
+            <p><br /></p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link to="/services">
                 <Button variant="secondary" size="lg" dataTestId="hero-services-button" className="w-full sm:w-auto bg-white text-primary hover:bg-white/90">
                   Explore Our Services
                 </Button>
               </Link>
-              <Link to="/contact">
+              <Link to="/about">
                 <Button variant="primary" size="lg" dataTestId="hero-contact-button" className="w-full sm:w-auto bg-primary hover:bg-primary-hover border-2 border-white">
-                  Get In Touch
+                  Know More About Us
                 </Button>
               </Link>
             </div>
@@ -95,10 +105,10 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-neutral-text-primary mb-6">
-                About Dave & Associates
+                Dave & Associates,<br/> Chartered Accountants
               </h2>
               <p className="text-lg text-neutral-text-secondary leading-relaxed mb-6">
-                Dave & Associates, Chartered Accountants is a leading chartered accountancy firm located in Ahmedabad, Gujarat, India headed by young and dynamic team of Chartered Accountants. Our core objective is to provide services with utmost accuracy and integrity that one can rely on.
+                <b>"Your Trusted Financial Advisors"</b> We are a leading Chartered Accountant firm in Ahmedabad, Gujarat, India led by a young and dynamic team of Chartered Accountants. Our practice is built on the fundamental values of integrity, transparency, and professional excellence, which form the cornerstone of every client relationship we undertake. We believe that trust and clarity are essential in financial matters, and therefore strive to maintain the highest standards of ethical conduct and openness in all our engagements.
               </p>
               <p className="text-lg text-neutral-text-secondary leading-relaxed mb-8">
                 We provide expert and professional services with that extra personal touch which makes our goodwill strong. The firm is founded by CA Sarang M. Dave, who brings over a decade of experience in almost every area of professional work.
@@ -109,16 +119,7 @@ const Home = () => {
                 </Button>
               </Link>
             </div>
-            <div>
-              <img 
-                src="/images/cabin.webp" 
-                alt="Professional team meeting" 
-                className="rounded-lg shadow-hover w-full h-auto"
-              />
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+            <div className="grid grid-cols-2 gap-6">
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border border-blue-200 text-center hover:shadow-lg hover:scale-105 hover:border-primary transition-all duration-300 cursor-default">
                 <FaAward className="w-10 h-10 text-primary mb-4 mx-auto" />
                 <h3 className="text-2xl font-bold text-primary mb-2">10+</h3>
@@ -126,19 +127,20 @@ const Home = () => {
               </div>
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border border-blue-200 text-center hover:shadow-lg hover:scale-105 hover:border-primary transition-all duration-300 cursor-default">
                 <FaUsers className="w-10 h-10 text-primary-700 mb-4 mx-auto" />
-                <h3 className="text-2xl font-bold text-primary-700 mb-2">24/7</h3>
-                <p className="text-neutral-text-secondary">Client Support</p>
+                <h3 className="text-2xl font-bold text-primary-700 mb-2">100%</h3>
+                <p className="text-neutral-text-secondary">Client Data Confidentiality</p>
               </div>
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border border-blue-200 text-center hover:shadow-lg hover:scale-105 hover:border-primary transition-all duration-300 cursor-default">
-                <FaCheckCircle className="w-10 h-10 text-primary mb-4 mx-auto" />
-                <h3 className="text-2xl font-bold text-primary mb-2">100%</h3>
-                <p className="text-neutral-text-secondary">Client Satisfaction</p>
+                <FaCheckCircle className="w-10 h-10 text-primary-700 mb-4 mx-auto" />
+                <h3 className="text-2xl font-bold text-primary-700 mb-2">10+</h3>
+                <p className="text-neutral-text-secondary">Industry Verticals served</p>
               </div>
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border border-blue-200 text-center hover:shadow-lg hover:scale-105 hover:border-primary transition-all duration-300 cursor-default">
-                <FaHandshake className="w-10 h-10 text-primary-700 mb-4 mx-auto" />
-                <h3 className="text-2xl font-bold text-primary-700 mb-2">8+</h3>
+                <FaHandshake className="w-10 h-10 text-primary mb-4 mx-auto" />
+                <h3 className="text-2xl font-bold text-primary mb-2">8+</h3>
                 <p className="text-neutral-text-secondary">Service Categories</p>
               </div>
+            </div>
           </div>
         </div>
       </section>
@@ -151,7 +153,7 @@ const Home = () => {
               Our Comprehensive Services
             </h2>
             <p className="text-lg text-neutral-text-secondary max-w-3xl mx-auto leading-relaxed">
-              From taxation to financial advisory, we offer a complete range of professional services tailored to your business needs.
+              By combining strong technical expertise with a practical and solution-oriented approach, we offer a comprehensive range of services to our clients:
             </p>
           </div>
 
@@ -203,51 +205,51 @@ const Home = () => {
 
       {/* Quote Section with CTA */}
       <section
-  className="relative py-16 text-white overflow-hidden"
-  style={{
-    backgroundImage:
-      'linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80")',
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
->
-  <div className="container-custom relative z-10">
-    <div className="max-w-7xl mx-auto bg-primary/30 backdrop-blur-lg rounded-2xl shadow-2xl px-10 py-8 border border-white/20">
-      
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-        
-        {/* Left Content */}
-        <div className="flex-1">
-          <blockquote className="text-xl md:text-2xl font-medium leading-relaxed">
-            "We endeavor to constantly improve the quality of our services through
-            adhering to integrity, professional excellence and a proactive
-            client-centric approach."
-          </blockquote>
+        className="relative py-16 text-white overflow-hidden"
+        style={{
+          backgroundImage:
+            'linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="container-custom relative z-10">
+          <div className="max-w-7xl mx-auto bg-primary/30 backdrop-blur-lg rounded-2xl shadow-2xl px-10 py-8 border border-white/20">
+            
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+              
+              {/* Left Content */}
+              <div className="flex-1">
+                <blockquote className="text-xl md:text-2xl font-medium leading-relaxed">
+                  "We endeavor to constantly improve the quality of our services through
+                  adhering to integrity, professional excellence and a proactive
+                  client-centric approach."
+                </blockquote>
 
-          <p className="mt-4 text-lg text-white/90 font-semibold">
-            Our Commitment to Excellence
-          </p>
+                <p className="mt-4 text-lg text-white/90 font-semibold">
+                  Our Commitment to Excellence
+                </p>
+              </div>
+
+              {/* Right Button */}
+              <div>
+                <Link to="/contact">
+                  <Button
+                    variant="secondary"
+                    size="lg"
+                    dataTestId="quote-cta-contact"
+                    className="bg-white text-primary hover:bg-white/90 px-8 py-3 rounded-xl shadow-xl transition-all duration-300 hover:scale-105"
+                  >
+                    Contact Us
+                  </Button>
+                </Link>
+              </div>
+
+            </div>
+
+          </div>
         </div>
-
-        {/* Right Button */}
-        <div>
-          <Link to="/contact">
-            <Button
-              variant="secondary"
-              size="lg"
-              dataTestId="quote-cta-contact"
-              className="bg-white text-primary hover:bg-white/90 px-8 py-3 rounded-xl shadow-xl transition-all duration-300 hover:scale-105"
-            >
-              Contact Us
-            </Button>
-          </Link>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-</section>
+      </section>
 
     </>
   );

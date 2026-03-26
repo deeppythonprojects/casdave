@@ -22,7 +22,7 @@ const Footer = () => {
           <div>
             <p>{contactData.address.line1}</p>
             <p>{contactData.address.line2}</p>
-            <p>{contactData.address.state}, {contactData.address.city},{contactData.address.pincode}</p>
+            <p>{contactData.address.city}, {contactData.address.state} - {contactData.address.pincode}</p>
           </div>
         </div>
         <a href={`tel:${contactData.phone}`} className="flex items-center hover:text-primary transition-colors" data-testid="footer-phone">

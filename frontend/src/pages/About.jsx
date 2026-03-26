@@ -51,37 +51,48 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-text-primary mb-8 text-center">
               About the Firm
             </h2>
-            
-            <div className="prose prose-lg max-w-none text-neutral-text-secondary space-y-6">
-              <p className="leading-relaxed">
-                Dave & Associates, Chartered Accountants is a leading chartered accountancy firm located in Ahmedabad, Gujarat, India headed by young and dynamic team of Chartered Accountants. Our core objective is to provide services with utmost accuracy and integrity that one can rely on. We provide expert and professional services with that extra personal touch which makes our goodwill strong.
-              </p>
-              
-              <p className="leading-relaxed">
-                The firm is founded by CA Sarang M. Dave, who is the backbone of the firm. He has been working as a Practicing Chartered Accountant since more than a decade and he is having wide experience in almost every area of professional work. He has maintained certain qualities at a firm level as a whole which include high level of expertise and competence of the team, straightforwardness and transparency that reflects in the way we advocate the issues of our clients at different platforms.
-              </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
-                <div className="bg-accent p-6 rounded-lg border border-primary/20">
-                  <h3 className="text-xl font-bold text-primary mb-3">Our Mission</h3>
-                  <p className="text-neutral-text-secondary">
-                    To build high quality trusted organization that deliver ethical, insightful and value-driven best in class services to its international as well as domestic clients.
-                  </p>
-                </div>
-                
-                <div className="bg-accent p-6 rounded-lg border border-primary/20">
-                  <h3 className="text-xl font-bold text-primary mb-3">Our Vision</h3>
-                  <p className="text-neutral-text-secondary">
-                    We envision developing an organization in future years on the foundation of expertise, technical excellence, transparency, credibility and commitment.
-                  </p>
-                </div>
-                
-                <div className="bg-accent p-6 rounded-lg border border-primary/20">
-                  <h3 className="text-xl font-bold text-primary mb-3">Our Values</h3>
-                  <p className="text-neutral-text-secondary">
-                    We endeavor to constantly improve the quality of our services through adhering to integrity, professional excellence and proactive client centric approach.
-                  </p>
-                </div>
+            {/* Image left, text right */}
+            <div className="flex flex-col md:flex-row gap-10 items-center mb-12">
+               <div className="md:w-1/2 prose prose-lg max-w-none text-neutral-text-secondary space-y-6">
+                <p className="leading-relaxed">
+                  Dave & Associates, Chartered Accountants, is founded by CA Sarang M. Dave who is the driving force behind the firm. He brings over more than a decade of diversified professional work experience. 
+                </p>
+                <p className="leading-relaxed">
+                  Our core objective is to provide services with utmost accuracy and integrity that one can rely on. Our founder, CA Sarang Dave has maintained certain fundamental qualities at an enterprise level as a whole which include integrity, transparency, straightforwardness and high level of expertise. Thus, since the inception, the firm has continued to evolve based on these beliefs in its vision, values, polices and culture.  
+                </p>
+              </div>
+              <div className="md:w-1/2 flex-shrink-0">
+                <img
+                  src="/images/cabin.webp"
+                  alt="Dave & Associates Office"
+                  className="w-full h-full object-cover rounded-xl shadow-md"
+                />
+              </div>
+             
+            </div>
+
+            {/* Mission, Vision, Values */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-accent p-6 rounded-lg border border-primary/20">
+                <h3 className="text-xl font-bold text-primary mb-3">Our Mission</h3>
+                <p className="text-neutral-text-secondary">
+                  To build high quality trusted organization that deliver ethical, insightful and value-driven best in class services to its international as well as domestic clients.
+                </p>
+              </div>
+              
+              <div className="bg-accent p-6 rounded-lg border border-primary/20">
+                <h3 className="text-xl font-bold text-primary mb-3">Our Vision</h3>
+                <p className="text-neutral-text-secondary">
+                  We envision developing an organization in future years on the foundation of expertise, technical excellence, transparency, credibility and commitment.
+                </p>
+              </div>
+              
+              <div className="bg-accent p-6 rounded-lg border border-primary/20">
+                <h3 className="text-xl font-bold text-primary mb-3">Our Values</h3>
+                <p className="text-neutral-text-secondary">
+                  We endeavor to constantly improve the quality of our services through adhering to integrity, professional excellence and proactive client centric approach.
+                </p>
               </div>
             </div>
           </div>
@@ -153,7 +164,7 @@ const About = () => {
                 key={member.id} 
                 className="bg-white rounded-xl border border-neutral-border shadow-card hover:shadow-hover transition-shadow overflow-hidden mb-16"
               >
-                <div className={`flex flex-col md:flex-row ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+                <div className="flex flex-col md:flex-row">
                   {/* Image with LinkedIn Hover - Equal width for both */}
                   <div className="md:w-2/5 relative group flex-shrink-0">
                     <img 
