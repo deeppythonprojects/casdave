@@ -32,7 +32,7 @@ const Services = () => {
 
       {/* Page Hero with Background Image */}
       <section className="relative py-20 overflow-hidden" style={{
-        backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1600&q=80")',
+        backgroundImage: 'linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.pexels.com/photos/7654591/pexels-photo-7654591.jpeg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
