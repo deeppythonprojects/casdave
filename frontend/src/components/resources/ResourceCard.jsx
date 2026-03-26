@@ -49,7 +49,7 @@ const ResourceCard = ({ resource }) => {
         </h3>
 
         {/* Excerpt */}
-        <p className="text-neutral-text-secondary leading-relaxed mb-4 line-clamp-3">
+        <p className="text-neutral-text-secondary leading-relaxed mb-4 line-clamp-3 text-justify">
           {resource.excerpt}
         </p>
 

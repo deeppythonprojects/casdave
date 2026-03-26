@@ -43,7 +43,7 @@ const ServiceCard = ({ service }) => {
         </h3>
 
         {/* Description */}
-        <p className="text-neutral-text-secondary leading-relaxed mb-4 flex-grow">
+        <p className="text-neutral-text-secondary leading-relaxed mb-4 flex-grow text-justify">
           {service.shortDescription}
         </p>
 

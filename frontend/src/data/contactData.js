@@ -5,13 +5,13 @@ export const contactData = {
   phone: '+91 7940329623',
   address: {
     line1: '208, Maurya Complex, Navjeevan Press Road',
-    line2: 'Nr. Incometax Cross Road',
+    line2: 'Nr. Income Tax Cross Road',
     city: 'Ahmedabad',
     state: 'Gujarat',
     pincode: '380014',
     country: 'India'
   },
-  fullAddress: '208, Maurya Complex, Navjeevan Press Road, Nr. Incometax Cross Road, Ahmedabad - 380014, Gujarat, India',
+  fullAddress: '208, Maurya Complex, Navjeevan Press Road, Nr. Income Tax Cross Road, Ahmedabad - 380014, Gujarat, India',
   website: 'www.casdave.co.in',
   social: {
     facebook: '#',

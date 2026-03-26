@@ -67,7 +67,7 @@ const Services = () => {
                   <h2 className="text-3xl font-bold text-neutral-text-primary mb-4">
                     {service.title}
                   </h2>
-                  <p className="text-lg text-neutral-text-secondary leading-relaxed mb-6">
+                  <p className="text-lg text-neutral-text-secondary leading-relaxed mb-6 text-justify">
                     {service.shortDescription}
                   </p>
                   <Link to={`/services/${service.slug}`}>

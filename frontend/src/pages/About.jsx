@@ -54,7 +54,7 @@ const About = () => {
 
             {/* Image left, text right */}
             <div className="flex flex-col md:flex-row gap-10 items-center mb-12">
-               <div className="md:w-1/2 prose prose-lg max-w-none text-neutral-text-secondary space-y-6">
+               <div className="md:w-1/2 prose prose-lg max-w-none text-neutral-text-secondary space-y-6 text-justify">
                 <p className="leading-relaxed">
                   Dave & Associates, Chartered Accountants, is founded by CA Sarang M. Dave who is the driving force behind the firm. He brings over more than a decade of diversified professional work experience. 
                 </p>
@@ -76,21 +76,21 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-accent p-6 rounded-lg border border-primary/20">
                 <h3 className="text-xl font-bold text-primary mb-3">Our Mission</h3>
-                <p className="text-neutral-text-secondary">
+                <p className="text-neutral-text-secondary text-justify">
                   To build high quality trusted organization that deliver ethical, insightful and value-driven best in class services to its international as well as domestic clients.
                 </p>
               </div>
               
               <div className="bg-accent p-6 rounded-lg border border-primary/20">
                 <h3 className="text-xl font-bold text-primary mb-3">Our Vision</h3>
-                <p className="text-neutral-text-secondary">
+                <p className="text-neutral-text-secondary text-justify">
                   We envision developing an organization in future years on the foundation of expertise, technical excellence, transparency, credibility and commitment.
                 </p>
               </div>
               
               <div className="bg-accent p-6 rounded-lg border border-primary/20">
                 <h3 className="text-xl font-bold text-primary mb-3">Our Values</h3>
-                <p className="text-neutral-text-secondary">
+                <p className="text-neutral-text-secondary text-justify">
                   We endeavor to constantly improve the quality of our services through adhering to integrity, professional excellence and proactive client centric approach.
                 </p>
               </div>
@@ -196,7 +196,7 @@ const About = () => {
                     <p className="text-sm text-neutral-text-muted mb-4">
                       {member.qualifications}
                     </p>
-                    <p className="text-neutral-text-secondary leading-relaxed mb-4">
+                    <p className="text-neutral-text-secondary leading-relaxed mb-4 text-justify">
                       {member.bio}
                     </p>
                     <div className="space-y-2">

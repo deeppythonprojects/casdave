@@ -21,8 +21,8 @@ export const FeatureCard = ({ icon: Icon, title, description }) => {
           </div>
         </div>
         <div className="flex-1">
-          <h3 className="text-xl font-semibold text-neutral-text-primary mb-2">{title}</h3>
-          <p className="text-neutral-text-secondary leading-relaxed">{description}</p>
+          <h3 className="text-xl font-semibold text-neutral-text-primary mb-2 ">{title}</h3>
+          <p className="text-neutral-text-secondary leading-relaxed text-justify">{description}</p>
         </div>
       </div>
     </Card>
