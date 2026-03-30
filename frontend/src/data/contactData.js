@@ -15,9 +15,9 @@ export const contactData = {
   website: 'www.casdave.co.in',
   social: {
     facebook: '#',
-    linkedin: 'https://www.linkedin.com/in/ca-sarang-dave-888b0269/'
+    linkedin: 'https://www.linkedin.com/company/dave-associates-chartered-accountants/'
   },
-  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6998.775614424354!2d72.567797!3d23.042533!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85006fa5affb%3A0xbc43d4f068d46568!2sKAUSHIK%20S.%20SHETH%20%26%20CO.%20CHARTERED%20ACCOUNTANTS!5e1!3m2!1sen!2sin!4v1772816688237!5m2!1sen!2sin',
+  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3489.828317696675!2d72.56519007509242!3d23.042468179159876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8500473f4955%3A0x91e7626bf1967e9f!2sDave%20%26%20Associates%2C%20Chartered%20Accountant!5e1!3m2!1sen!2sin!4v1774880912030!5m2!1sen!2sin',
   officeHours: 'Monday - Saturday: 10:00 AM - 7:00 PM',
   serviceInterests: [
     'Direct Taxes',
@@ -31,3 +31,4 @@ export const contactData = {
     'Other'
   ]
 };
+
